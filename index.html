@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Rigi - Digital Agency</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+
+        <!-- Form -->
+        <div class="hidden" id="form_talk_container">
+            <div class="form_talk_overlay">
+            </div>
+            <div class="form_background" id="form_background">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg close_form" viewBox="0 0 16 16" onclick="closeForm()">
+                    <path fill-rule="evenodd"
+                        d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                    <path fill-rule="evenodd"
+                        d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+                </svg>
+                <form class="form_talk" id="form_talk" onsubmit="event.preventDefault()">
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label">Name</label>
+                        <input type="text" required class="form-control" id="inputName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Email</label>
+                        <input type="email" required class="form-control" id="inputEmail">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPhone" class="form-label">Phone</label>
+                        <input type="tel" required class="form-control" id="inputPhone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="textarea" class="form-label">Message</label>
+                        <textarea class="form-control" id="textarea" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-256" onclick="sendForm()">Send</button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-color">
+            <div class="container d-flex flex-wrap justify-content-between">
+                <a class="navbar-brand" href="index.html">
+                    <img src="/assets/images/logo.png" width="28" height="32" class="d-inline-block align-top" alt=""> Rigi
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="/">Home</a></li>
+                        <li><a class="nav-link" href="/portfolio/">Our Works</a></li>
+                        <li><a class="nav-link" href="/blog/">Blog</a></li>
+                        <li><a class="nav-link" href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-outline-primary navbar_cta" onclick="showForm()">Contact
+                    Us</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <section class="hero-container">
+            <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+            <div class="overlay"></div>
+
+            <!-- The HTML5 video element that will create the background video on the header -->
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                <source src="/assets/video/hero-banner.mp4" type="video/mp4">
+            </video>
+
+            <!-- The header content -->
+            <div class="container h-100">
+                <div class="d-flex h-100 text-center align-items-center">
+                    <div class="w-100 text-white">
+                        <h1 class="display-3">Digital solutions that deliver results.</h1>
+                        <button type="button" class="hero-button" onclick="showForm()">Let's Talk</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our services -->
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center container mt-4">
+                    Our Services
+                </h2>
+            </div>
+            <div class="row  align-items-center">
+                <div class="col-md-6 col-12">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="/assets/images/our-services-1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-text">Social media</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="/assets/images/our-services-2.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-text">Web Design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="/assets/images/our-services-3.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-text">Branding</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="/assets/images/our-services-4.png" alt="Card image cap">
+                        <div class=" card-body">
+                            <h4 class="card-text">Digital Margeting</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our works -->
+            <div class="row mt-5">
+                <div class="col-12 d-flex justify-content-between">
+                    <h2 class="text-left container">
+                        Our works
+                    </h2>
+                    <a href="portfolio/" class="btn btn-link">See more</a>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card our_work_hp_card">
+                        <img class="card-img-top" src="/assets/images/Brent project preview.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Progressive Web App</h5>
+                            <p class="card-text">Social Progressive Web App that helps young people in care and social workers to communicate together for managing a document known as a `Pathway Plan’</p>
+                            <!-- <a href="portfolio/project-1" class="btn btn-primary">Read more</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card our_work_hp_card">
+                        <img class="card-img-top" src="/assets/images/dashboard.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Dashboard design</h5>
+                            <p class="card-text">Dashboard UI Design for Event Platform I have created for Norway's App. Event holders can manage events, see statistics, perform analysis.</p>
+                            <!-- <a href="portfolio/project-2" class="btn btn-primary">Read more</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 ">
+                    <div class="card our_work_hp_card">
+                        <img class="card-img-top" src="/assets/images/my-mall-1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">App Design for Mall</h5>
+                            <p class="card-text">Sometimes shopping is a real challenge. This UI design is the one to help: it's a mall mobile app that easily navigates you to search point and save your time.
+                            </p>
+                            <!-- <a href="portfolio/project-3" class="btn btn-primary">Read more</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5 mb-5">
+                <a href="/portfolio/index.html"><button type="button" class="btn btn-outline-primary btn-256">Check Our
+                        Works</button></a>
+            </div>
+        </div>
+        <!-- Testimonials -->
+
+        <div class="colored-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <h2 class="text-center">Testimonials</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-12 text-center">
+                        <img src="assets/images/testimonial man.png" alt="Picture of me" class="img-fluid my-photo my-2 rounded-circle">
+                        <p><strong>Asia Mall</strong></p>
+                        <p class="testimonial">
+                            "We have worked with Rigi on our app. Rigi is a team of professional designers, developers, marketers and IT specialists combining our knowledge and expertise to create exceptional designs and strategies, tailored to your business’s needs and requirements."
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class=" bg-light footer ">
+        <div class="container">
+            <div class=" row ">
+                <div class=" col-12 col-sm- col-md-6 ">
+                    <a class=" navbar-brand " href=" index.html ">
+                        <img src=" /assets/images/logo.png " width=" 28 " height=" 32 " class=" d-inline-block align-top " alt=" "> Rigi - Digital Agency
+                    </a>
+                    <p class=" text-left mb-0 lead text-muted sm-text ">
+                        Social Media, Branding, Webdesign, Digital Marketing
+                    </p>
+                </div>
+                <div class=" col-12 col-sm-12 col-md-6 ">
+                    <p class=" text-right mb-2 ">
+                        Get in touch
+                    </p>
+                    <p class=" text-right mb-0 ">
+                        <a href="# " class=" btn btn-link ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg></a>
+                        <a href="# " class=" btn btn-link ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                            </svg>
+                        </a>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity=" sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin=" anonymous "></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity=" sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin=" anonymous "></script>
+    <script src=" https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity=" sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin=" anonymous "></script>
+
+    <script src=" https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js "></script>
+    <script src="/assets/js/main.js">
+    </script>
+</body>
+
+</html>

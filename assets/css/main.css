@@ -1,0 +1,309 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    min-height: 100%;
+}
+
+
+/* .navbar{
+
+    width: 80px;
+
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.navbar li a:link {
+    color: #6002EE;
+    font-size: 18px;
+    font-weight: 800;
+  } */
+
+.bg-color {
+    background-color: #fff;
+}
+
+h3 {
+    font-size: 32px;
+    padding: 0;
+}
+
+.hero {
+    height: 240px;
+    background-color: #f8f4ff;
+    color: #6002EE;
+    text-align: center;
+    padding-top: 24px;
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+.hero h1 {
+    font-size: 56px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.sevice-List {
+    font-size: 24px;
+    padding-bottom: 12px;
+}
+
+.my-photo {
+    height: 130px;
+    border-radius: 4px;
+}
+
+.colored-section {
+    padding: 32px;
+    background-color: #f8f4ff;
+}
+
+.video {
+    width: 100%;
+    height: 500px;
+}
+
+.btn-primary {
+    background-color: #6002EE;
+    border-color: #6002EE;
+    margin-top: 32px;
+}
+
+.footer {
+    height: 120px;
+    padding-top: 32px;
+    margin-top: 32px;
+}
+
+.violet-text {
+    color: #6002EE;
+}
+
+.btn-outline-primary {
+    color: #6002EE;
+    border-color: #6002EE;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #6002EE;
+    border-color: #6002EE;
+}
+
+.jumbotron {
+    background-color: #fff;
+}
+
+.sm-text {
+    font-size: 0.875rem;
+    padding-left: 32px;
+}
+
+.btn-256 {
+    width: 256px;
+}
+
+.card {
+    margin-top: 2rem;
+}
+
+.our_work_hp_card {
+    margin-top: 1rem;
+}
+
+
+/* HERO SECTION WITH VIDEO */
+
+.hero-container {
+    position: relative;
+    background-color: black;
+    height: 60vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.hero-container .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.hero-container h1 {
+    font-size: 2rem;
+}
+
+.hero-button {
+    border: 0 none;
+    border-radius: 0.25rem;
+    background-color: #6002EE;
+    color: #fff;
+    cursor: pointer;
+    margin: 2rem 0 0 0;
+    padding: 1em 3em;
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+}
+
+.hero-button:hover,
+.btn-primary:hover {
+    background-color: #4c11a3;
+}
+
+.hero-button:focus {
+    outline: none;
+}
+
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+    .hero-container {
+        background: url('../images/hero-banner.jpeg') black no-repeat center center scroll;
+        background-size: cover;
+    }
+    .hero-container video {
+        display: none;
+    }
+}
+
+.testimonial {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.hidden {
+    display: none;
+}
+
+.form_talk_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 3;
+}
+
+.form_talk {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+}
+
+.form_background {
+    position: absolute;
+    background: #fff;
+    top: 100px;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 4;
+}
+
+.navbar_cta {
+    display: none;
+}
+
+.close_form {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.close_form:hover {
+    cursor: pointer;
+    color: #6002EE;
+    background-color: #f8f4ff;
+}
+
+@media only screen and (min-width: 1200px) {
+    .hero-container h1 {
+        font-size: 5rem;
+    }
+    .navbar_cta {
+        display: block;
+    }
+    .form_background {
+        width: 30%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .form_background {
+        width: 50%;
+    }
+    .navbar_cta {
+        display: block;
+    }
+    .hero-container h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-container h1 {
+        font-size: 3rem;
+    }
+    .form_background {
+        width: 70%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {}
