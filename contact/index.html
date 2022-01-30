@@ -13,43 +13,42 @@
 
 <body>
 
-    <!-- Form -->
-    <div class="hidden" id="form_talk_container">
-        <div class="form_talk_overlay">
-        </div>
 
-        <div class="form_background">
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg close_form" viewBox="0 0 16 16" onclick="closeForm()">
-                <path fill-rule="evenodd"
-                    d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
-                <path fill-rule="evenodd"
-                    d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
-            </svg>
-
-
-            <form class="form_talk ">
-                <div class="mb-3 col-4">
-                    <label for="exampleInputName" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="exampleInputName">
-                </div>
-                <div class="mb-3 col-4">
-                    <label for="exampleInputphone" class="form-label">Phone</label>
-                    <input type="tel" class="form-control" id="exampleInputPhone">
-                </div>
-                <div class="mb-3 col-4">
-                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <div class="col-4">
-                    <button type="submit" class="btn btn-primary btn-256">Send</button>
-                </div>
-
-            </form>
-        </div>
-    </div>
 
     <header>
+
+        <!-- Form -->
+        <div class="hidden" id="form_talk_container">
+            <div class="form_talk_overlay">
+            </div>
+            <div class="form_background" id="form_background">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg close_form" viewBox="0 0 16 16" onclick="closeForm()">
+                    <path fill-rule="evenodd"
+                        d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                    <path fill-rule="evenodd"
+                        d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+                </svg>
+                <form class="form_talk" id="form_talk" onsubmit="event.preventDefault()">
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label">Name</label>
+                        <input type="text" required class="form-control" id="inputName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Email</label>
+                        <input type="email" required class="form-control" id="inputEmail">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPhone" class="form-label">Phone</label>
+                        <input type="tel" required class="form-control" id="inputPhone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="textarea" class="form-label">Message</label>
+                        <textarea class="form-control" id="textarea" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-256" onclick="sendForm()">Send</button>
+                </form>
+            </div>
+        </div>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-color">
             <div class="container d-flex flex-wrap justify-content-between">
